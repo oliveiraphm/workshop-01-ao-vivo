@@ -16,13 +16,13 @@ def main():
 
         if error:
             ui.display_wrong_message()
-            logging.error("Planilha apresentava erro de schema")
-            sentry_sdk.capture_message("A planilha Excel estava errada")
+            #logging.error("Planilha apresentava erro de schema")
+            #sentry_sdk.capture_message("A planilha Excel estava errada")
         elif ui.display_save_button():
             excel_to_sql(df)
             ui.display_success_message()
-            logging.info(" Foi enviado com sucesso o banco SQL")
-            sentry_sdk.capture_message("O banco SQL foi atualizado")
+            #logging.info(" Foi enviado com sucesso o banco SQL")
+            #sentry_sdk.capture_message("O banco SQL foi atualizado")
 
 if __name__ == "__main__":
     main()
